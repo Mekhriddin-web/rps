@@ -1,0 +1,13 @@
+import { onAuthStateChanged } from 'firebase/auth';
+import { useEffect } from 'preact/hooks';
+import { Navigate, Outlet } from 'react-router-dom';
+import { auth } from '../lib/firebase';
+import { useAuthState } from 'react-firebase-hooks/auth';
+
+const PrivateRotes = () => {
+  const [user] = useAuthState(auth);
+
+  return user ? <Outlet /> : <Navigate to='/singUp' />;
+};
+
+export default PrivateRotes;

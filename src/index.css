@@ -1,0 +1,163 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Barlow', 'sans-serif';
+  color: #fff;
+  font-weight: 400;
+}
+
+.wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+
+  max-width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.app {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-height: 1px;
+}
+
+.auth {
+  background-image: url(/public/diamonds-bg.jpg);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.auth__inner {
+  display: block;
+  width: 50%;
+  height: 100%;
+  padding: 200px 90px;
+  background-color: #c0c0c0;
+}
+
+.auth form {
+  max-width: 420px;
+  width: 100%;
+  margin: 68px auto 0;
+}
+
+.auth__text {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.auth__text span {
+  position: relative;
+}
+
+.auth__text span:before,
+.auth__text span:after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 1px;
+  background-color: #afa8a8;
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+
+.auth__text span:before {
+  left: 35px;
+}
+
+.auth__text span:after {
+  right: 35px;
+}
+
+.header {
+  /* position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 11;
+  width: 100%; */
+}
+
+.header__left {
+  flex-shrink: 0;
+  width: 412px;
+  height: 100%;
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.69) 0%,
+      rgba(0, 0, 0, 0.69) 100%
+    ),
+    #a259ff;
+}
+.header__right {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(90deg, #5773fa 60%, #a259ff 90%);
+}
+
+.intro {
+  position: relative;
+  z-index: 1;
+  padding-top: 210px;
+  padding-bottom: 48px;
+}
+
+.intro:before,
+.intro:after {
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.intro:before {
+  left: 0;
+  z-index: -1;
+  width: 412px;
+
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.69) 0%,
+      rgba(0, 0, 0, 0.69) 100%
+    ),
+    #a259ff;
+}
+
+.intro:after {
+  right: 0;
+  z-index: -2;
+  width: 100%;
+  background-image: linear-gradient(90deg, #5773fa 60%, #a259ff 90%);
+}
+
+.intro__title {
+  position: relative;
+  z-index: 1;
+}
+
+.intro__title:after {
+  content: '';
+  display: block;
+  width: 385px;
+  height: 385px;
+  position: absolute;
+  top: 90px;
+  right: -290px;
+  z-index: 1;
+  background-image: url(/public/02.png);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.intro__btn {
+  background: rgba(0, 0, 0, 0.2);
+}
