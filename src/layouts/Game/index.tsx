@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'preact/hooks';
+import { useState } from 'preact/hooks';
 import Timer from '../../components/Timer';
 import ModalChose from '../../components/ModalChose';
 import User from '../../components/User';

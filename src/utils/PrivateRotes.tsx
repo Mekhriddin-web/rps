@@ -1,5 +1,3 @@
-import { onAuthStateChanged } from 'firebase/auth';
-import { useEffect } from 'preact/hooks';
 import { Navigate, Outlet } from 'react-router-dom';
 import { auth } from '../lib/firebase';
 import { useAuthState } from 'react-firebase-hooks/auth';
