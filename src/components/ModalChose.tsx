@@ -34,7 +34,7 @@ const ModalChose = ({
         </p>
         <div className='relative mt-[80px] pt-[80px] pb-[200px] px-[204px] max-w-[630px] m-auto'>
           <img
-            src='/public/02.png'
+            src='/images/02.png'
             alt='img desc'
             className='w-[212px] h-[216px] m-auto'
           />
@@ -43,7 +43,7 @@ const ModalChose = ({
             onClick={() => handleChose(0)}
           >
             <img
-              src='/public/s-icon-big.jpg'
+              src='/images/s-icon-big.jpg'
               alt='scissors'
               className='w-[190px] h-[190px]'
             />
@@ -59,7 +59,7 @@ const ModalChose = ({
             onClick={() => handleChose(1)}
           >
             <img
-              src='/public/p-icon-big.jpg'
+              src='/images/p-icon-big.jpg'
               alt='scissors'
               className='w-[190px] h-[190px]'
             />
@@ -75,7 +75,7 @@ const ModalChose = ({
             onClick={() => handleChose(2)}
           >
             <img
-              src='/public/r-icon-big.jpg'
+              src='/images/r-icon-big.jpg'
               alt='scissors'
               className='w-[190px] h-[190px]'
             />

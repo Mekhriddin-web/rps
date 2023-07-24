@@ -25,10 +25,10 @@ const User = ({ user }: IProps) => {
           <img
             src={`${
               user.figure === 0
-                ? '/public/s-icon.jpg'
+                ? '/images/s-icon.jpg'
                 : user.figure === 1
-                ? '/public/p-icon.jpg'
-                : '/public/r-icon.jpg'
+                ? '/images/p-icon.jpg'
+                : '/images/r-icon.jpg'
             }`}
             alt='img desc'
             className='w-[80px] h-[80px] rounded-full'

@@ -50,7 +50,7 @@ const Game = () => {
     choseBotFigure(null);
   }
 
-  if (!user.ready && seconds === 0) return <Navigate to='/' />;
+  if (!user.ready && seconds === 0) return <Navigate to='/rps/' />;
 
   return (
     <div className='pt-[260px] pb-[202px] bg-neutralBlack'>
@@ -67,7 +67,7 @@ const Game = () => {
           <User user={user} />
           <div className='my-10 relative flex items-center justify-center m-auto rounded-full bg-gray w-[700px] h-[700px]'>
             <img
-              src='/public/02.png'
+              src='/images/02.png'
               alt='img desc'
               className='w-[484px] h-[492px]'
             />

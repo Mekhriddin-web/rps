@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import introImg from '/public/01.png';
+import introImg from '/images/01.png';
 
 const Home = () => {
   return (
@@ -17,7 +17,7 @@ const Home = () => {
         </div>
         <div className='text-right'>
           <Link
-            to='/game'
+            to='/rps/game'
             className='intro__btn p-[24px] text-[50px] font-bold rounded-[26px]'
           >
             FREE TO PLAY

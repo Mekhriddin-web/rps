@@ -152,7 +152,7 @@ body {
   top: 90px;
   right: -290px;
   z-index: 1;
-  background-image: url(/public/02.png);
+  background-image: url(/images/02.png);
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;

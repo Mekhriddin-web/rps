@@ -28,14 +28,14 @@ type UserStore = UserState & UserActions;
 const useUsersStore = create<UserStore>(set => ({
   user: {
     name: 'default name',
-    image: '/public/avatar.jpg',
+    image: '/images/avatar.jpg',
     ready: false,
     figure: null,
     status: '',
   },
   bot: {
     name: 'Bot Botovich',
-    image: '/public/bot.jpg',
+    image: '/images/bot.jpg',
     ready: true,
     figure: null,
     status: '',

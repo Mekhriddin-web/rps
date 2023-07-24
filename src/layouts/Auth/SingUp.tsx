@@ -1,13 +1,13 @@
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { auth } from '../../lib/firebase';
-import googleIcon from '/public/google.svg';
+import googleIcon from '/images/google.svg';
 import { GoogleAuthProvider, signInWithRedirect } from 'firebase/auth';
 import { Navigate } from 'react-router-dom';
 
 const SingUp = () => {
   const [user] = useAuthState(auth);
 
-  if (user) return <Navigate to='/' />;
+  if (user) return <Navigate to='/rps/' />;
 
   const singUpWithGoogle = () => {
     const provider = new GoogleAuthProvider();
