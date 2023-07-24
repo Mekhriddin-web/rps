@@ -2,7 +2,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import Header from './components/Header';
 import SingUp from './layouts/Auth/SingUp';
 import Home from './layouts/Home';
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import PrivateRotes from './utils/PrivateRotes';
 import { auth } from './lib/firebase';
 import Game from './layouts/Game';
@@ -23,6 +23,7 @@ export function App() {
             <Route path='/rps/game' element={<Game />} />
           </Route>
           <Route path='/rps/singUp' element={<SingUp />} />
+          <Route path='*' element={<Navigate to='/rps' />} />
         </Routes>
       </div>
     </div>
