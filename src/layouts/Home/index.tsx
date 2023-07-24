@@ -17,7 +17,7 @@ const Home = () => {
         </div>
         <div className='text-right'>
           <Link
-            to='/rps/game'
+            to='/game'
             className='intro__btn p-[24px] text-[50px] font-bold rounded-[26px]'
           >
             FREE TO PLAY

@@ -50,7 +50,7 @@ const Game = () => {
     choseBotFigure(null);
   }
 
-  if (!user.ready && seconds === 0) return <Navigate to='/rps' />;
+  if (!user.ready && seconds === 0) return <Navigate to='/' />;
 
   return (
     <div className='pt-[260px] pb-[202px] bg-neutralBlack'>

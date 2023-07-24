@@ -19,11 +19,11 @@ export function App() {
       <div className='app'>
         <Routes>
           <Route element={<PrivateRotes />}>
-            <Route path='/rps' element={<Home />} />
-            <Route path='/rps/game' element={<Game />} />
+            <Route path='/' element={<Home />} />
+            <Route path='/game' element={<Game />} />
           </Route>
-          <Route path='/rps/singUp' element={<SingUp />} />
-          <Route path='*' element={<Navigate to='/rps' />} />
+          <Route path='/singUp' element={<SingUp />} />
+          <Route path='*' element={<Navigate to='/' />} />
         </Routes>
       </div>
     </div>

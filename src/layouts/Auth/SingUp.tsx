@@ -7,7 +7,7 @@ import { Navigate } from 'react-router-dom';
 const SingUp = () => {
   const [user] = useAuthState(auth);
 
-  if (user) return <Navigate to='/rps' />;
+  if (user) return <Navigate to='/' />;
 
   const singUpWithGoogle = () => {
     const provider = new GoogleAuthProvider();

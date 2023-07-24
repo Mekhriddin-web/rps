@@ -4,7 +4,7 @@ import './index.css';
 import { BrowserRouter } from 'react-router-dom';
 
 render(
-  <BrowserRouter>
+  <BrowserRouter basename='/rps'>
     <App />
   </BrowserRouter>,
   document.getElementById('app')!
