@@ -27,14 +27,14 @@ const ModalResult = ({
         </p>
         {result === 'win' && (
           <img
-            src='/images/victory.jpg'
+            src='images/victory.jpg'
             alt='img victory'
             className='w-[290px] h-[394px] mt-[15px] m-auto mb-[20px]'
           />
         )}
         {result === 'lose' && (
           <img
-            src='/images/lose.jpg'
+            src='images/lose.jpg'
             alt='img lose'
             className='w-[319px] h-[364px] mt-[15px] m-auto mb-[20px]'
           />
