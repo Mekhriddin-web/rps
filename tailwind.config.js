@@ -20,6 +20,7 @@ export default {
       'orange': '#FEC00F',
       'purple': '#A259FF',
       'green': '#19D520',
+      'red': '#F00',
       'transparent': 'transparent',
     }
   },

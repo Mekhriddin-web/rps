@@ -4,10 +4,14 @@ import introImg from '/images/01.png';
 const Home = () => {
   return (
     <div className='intro'>
-      <div className='container mx-auto px-4'>
-        <div className='flex gap-[40px]'>
-          <img src={introImg} alt='img desc' className='w-[566px] h-[564px]' />
-          <h1 className='intro__title text-[80px] leading-[96px] font-semibold'>
+      <div className='container mx-auto px-[calc(4/1512*100vw)]'>
+        <div className='flex gap-[calc(40/1512*100vw)]'>
+          <img
+            src={introImg}
+            alt='img desc'
+            className='w-[calc(566/1512*100vw)] h-[calc(564/1512*100vw)]'
+          />
+          <h1 className='intro__title text-[calc(80/1512*100vw)] leading-[calc(96/1512*100vw)] font-semibold'>
             Play a game
             <br /> STONE
             <br /> SCISSORS
@@ -18,7 +22,7 @@ const Home = () => {
         <div className='text-right'>
           <Link
             to='/game'
-            className='intro__btn p-[24px] text-[50px] font-bold rounded-[26px]'
+            className='intro__btn p-[calc(24/1512*100vw)] text-[calc(50/1512*100vw)] font-bold rounded-[calc(26/1512*100vw)]'
           >
             FREE TO PLAY
           </Link>

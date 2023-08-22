@@ -23,7 +23,13 @@ const Timer = ({ seconds, setSeconds }: IProps) => {
 
   return (
     <div>
-      <p className='text-[128px] text-center'>{formatTime(seconds)}</p>
+      <p
+        className={`text-[calc(128/1512*100vw)] leading-[calc(132/1512*100vw)] text-center ${
+          seconds <= 3 ? 'text-red' : ''
+        }`}
+      >
+        {formatTime(seconds)}
+      </p>
     </div>
   );
 };

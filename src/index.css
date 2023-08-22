@@ -77,17 +77,9 @@ body {
   right: 35px;
 }
 
-.header {
-  /* position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 11;
-  width: 100%; */
-}
-
 .header__left {
   flex-shrink: 0;
-  width: 412px;
+  width: calc(412 / 1512 * 100vw);
   height: 100%;
   background: linear-gradient(
       0deg,
@@ -105,8 +97,9 @@ body {
 .intro {
   position: relative;
   z-index: 1;
-  padding-top: 210px;
-  padding-bottom: 48px;
+  padding-top: calc(50 / 1512 * 100vw);
+  padding-bottom: calc(48 / 1512 * 100vw);
+  height: calc(100vh - calc(130 / 1512 * 100vw));
 }
 
 .intro:before,
@@ -121,7 +114,7 @@ body {
 .intro:before {
   left: 0;
   z-index: -1;
-  width: 412px;
+  width: calc(412 / 1512 * 100vw);
 
   background: linear-gradient(
       0deg,
@@ -146,11 +139,11 @@ body {
 .intro__title:after {
   content: '';
   display: block;
-  width: 385px;
-  height: 385px;
+  width: calc(385 / 1512 * 100vw);
+  height: calc(385 / 1512 * 100vw);
   position: absolute;
-  top: 90px;
-  right: -290px;
+  top: calc(90 / 1512 * 100vw);
+  right: calc(-290 / 1512 * 100vw);
   z-index: 1;
   background-image: url(/images/02.png);
   background-position: 50% 50%;
@@ -160,4 +153,27 @@ body {
 
 .intro__btn {
   background: rgba(0, 0, 0, 0.2);
+}
+
+.button-flash {
+  animation: flashing 1300ms infinite;
+}
+
+.button-flash:hover {
+  animation-play-state: paused;
+}
+
+@keyframes flashing {
+  0% {
+    background-color: #a259ff;
+    box-shadow: 0 0 3px #a259ff;
+  }
+  50% {
+    background-color: #8a5dc5;
+    box-shadow: 0 0 10px #8a5dc5;
+  }
+  100% {
+    background-color: #50238b;
+    box-shadow: 0 0 3px #50238b;
+  }
 }

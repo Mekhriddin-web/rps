@@ -11,17 +11,17 @@ interface IProps {
 const User = ({ user }: IProps) => {
   return (
     <div
-      className={`relative max-w-[150px] m-auto rounded-full border-4 ${
+      className={`relative max-w-[calc(150/1512*100vw)] m-auto rounded-full border-[calc(4/1512*100vw)] ${
         user.ready ? 'border-green' : 'border-transparent'
       }`}
     >
       <img
         src={user.image}
         alt='img desc'
-        className='w-[150px] h-[150px] rounded-full'
+        className='w-[calc(150/1512*100vw)] h-[calc(150/1512*100vw)] rounded-full'
       />
       {user.figure !== null && (
-        <div className='absolute top-[-20px] right-[-20px] z-10 flex items-center justify-center w-[80px] h-[80px] rounded-full bg-purple'>
+        <div className='absolute top-[calc(-20/1512*100vw)] right-[calc(-20/1512*100vw)] z-10 flex items-center justify-center w-[calc(80/1512*100vw)] h-[calc(80/1512*100vw)] rounded-full bg-purple'>
           <img
             src={`${
               user.figure === 0
@@ -31,12 +31,14 @@ const User = ({ user }: IProps) => {
                 : 'images/r-icon.jpg'
             }`}
             alt='img desc'
-            className='w-[80px] h-[80px] rounded-full'
+            className='w-[calc(80/1512*100vw)] h-[calc(80/1512*100vw)] rounded-full'
           />
         </div>
       )}
       <div className='opacity-0 hover:opacity-100 ease-in duration-300 cursor-pointer flex items-center justify-center absolute top-0 left-0 w-full h-full rounded-full bg-blackOpacity'>
-        <p className='text-[20px] font-semibold text-center'>{user.name}</p>
+        <p className='text-[calc(20/1512*100vw)] font-semibold text-center'>
+          {user.name}
+        </p>
       </div>
     </div>
   );

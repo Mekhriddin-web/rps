@@ -53,30 +53,25 @@ const Game = () => {
   if (!user.ready && seconds === 0) return <Navigate to='/' />;
 
   return (
-    <div className='pt-[260px] pb-[202px] bg-neutralBlack'>
-      <div className='container mx-auto px-4'>
+    <div className='pt-[calc(20/1512*100vw)] pb-[calc(50/1512*100vw)] bg-neutralBlack'>
+      <div className='container mx-auto px-[calc(4/1512*100vw)]'>
         <Timer seconds={seconds} setSeconds={setSeconds} />
-        <p className='text-center mb-10'>
-          At the top you see the time until the end of the recruitment of
-          players, have time to hit the "Ready" button to take part in the game.
-          If you pressed the "Ready" button - After the end of the time, a
-          window for selecting a figure (stone, scissors, paper) will open.
-          Successful game to you! There will be one winner!
-        </p>
         <div className='flex'>
           <User user={user} />
-          <div className='my-10 relative flex items-center justify-center m-auto rounded-full bg-gray w-[700px] h-[700px]'>
+          <div className='my-[calc(10/1512*100vw)] relative flex items-center justify-center m-auto rounded-full bg-gray w-[calc(600/1512*100vw)] h-[calc(600/1512*100vw)]'>
             <img
               src='images/02.png'
               alt='img desc'
-              className='w-[484px] h-[492px]'
+              className='w-[calc(384/1512*100vw)] h-[calc(392/1512*100vw)]'
             />
-            <button
-              className='absolute top-[50%] left-0 translate-y-[-50%] flex items-center justify-center w-full bg-purple text-[92px] font-semibold'
-              onClick={() => readyStart(true)}
-            >
-              Ready
-            </button>
+            {!user.ready && (
+              <button
+                className='button-flash absolute top-[50%] left-0 translate-y-[-50%] flex items-center justify-center w-full bg-purple text-[calc(92/1512*100vw)] font-semibold'
+                onClick={() => readyStart(true)}
+              >
+                Ready
+              </button>
+            )}
           </div>
           <User user={bot} />
         </div>
